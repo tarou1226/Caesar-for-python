@@ -1,9 +1,14 @@
 def main():
-    encryption = input()
-    decryption(encryption)
+    encryption = "F^jQbolol"
+    decryption = decrypt(encryption)
+    print("".join(decryption))
 
-def decryption(encryption_str):
-    print("hello, {}!".format(encryption_str))
+def decrypt(encryption_str: str) -> list:
+    # print("hello, {}!".format(encryption_str))
+    decryption = list()
+    for character in encryption_str:
+        decryption.append(chr(ord(character) + 3))
+    return decryption
 
 if __name__ == '__main__':
     main()
