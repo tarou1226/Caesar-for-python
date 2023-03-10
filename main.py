@@ -1,7 +1,16 @@
 def main():
     encryption = "F^jQbolol"
     decryption = decrypt(encryption)
+    encryption = encrypt(decryption)
     print("".join(decryption))
+    print("".join(encryption))
+
+def encrypt(plain_text: str) -> list:
+    # print("hello, {}!".format(plain_text))
+    encryption = list()
+    for character in plain_text:
+        encryption.append(chr(ord(character) - 3))
+    return encryption
 
 def decrypt(encryption_str: str) -> list:
     # print("hello, {}!".format(encryption_str))
